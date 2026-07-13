@@ -21,10 +21,9 @@ client = genai.Client(api_key=api_key)
 
 PROMPT = "You are a helpful YouTube video summarizer. Summarize the following transcript in a concise and informative manner, highlighting the key points and main ideas within 250 words. Provide a clear and engaging summary that captures the essence of the video content. The transcript is as follows : "
 
-MAX_TRANSCRIPT_CHARS = 60_000  # ~15k words, caps cost on very long videos
+MAX_TRANSCRIPT_CHARS = 60_000  
 
 
-# ---------- Styling ----------
 st.markdown(
     """
     <style>
@@ -185,7 +184,6 @@ def generate_content(transcript: str, prompt: str):
         return None
 
 
-# ---------- UI ----------
 st.markdown(
     """
     <div class="hero">
